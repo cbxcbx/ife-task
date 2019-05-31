@@ -1,6 +1,6 @@
 // 判断arr是否为一个数组，返回一个bool值
 function isArray(arr) {
-    return '[object Function]' === Object.prototype.toString.call(arr);
+    return Object.prototype.toString.call(arr) === '[object Array]'
 }
 // 判断fn是否为一个函数，返回一个bool值
 function isFunction(fn) {
@@ -223,5 +223,5 @@ function getPosition(element) {
  */
 
 function $(selector) {
-
+    return document.querySelectorAll(selector);
 }
